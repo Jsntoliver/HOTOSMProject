@@ -2,6 +2,14 @@
 
 How To Run:
 
+You can just use the mbtiles that I have included in the project or follow the steps below to make your own.
+
+If you use the ones I provide just follow the steps to run the road-diff program like this, "node index.js hawaii.mbtiles gpx.mbtiles".
+
+Then just follow the steps afterwards.
+
+Making your own mbtiles:
+
 First download your gpx files and download your road data from http://download.geofabrik.de/index.html. I downloaded the .shp.zip file of Hawaii. 
 
 Make sure that the gpx and road data are for the same area.
