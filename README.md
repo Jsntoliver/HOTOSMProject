@@ -6,6 +6,7 @@ You can just use the mbtiles that I have included in the project or follow the s
 
 If you use the ones I provide just follow the steps to run the road-diff program like this, "node index.js hawaii.mbtiles gpx.mbtiles".
 
+Then use "tippecanoe -o hdif.mbtiles hdif.ldjson" or whatever you named your output, to convert it to mbtiles.
 Then just follow the steps afterwards.
 
 Making your own mbtiles:
@@ -24,7 +25,7 @@ Then we convert to mbtiles using tippecanoe. Use tippecanoe -o choose_name.mbtil
 
 After this convert your gpx files into mbtiles using the convert.sh file in the project. 
 
-Just edit where the files are locatd and where they should be stored. I usually move them to where the ./tippecanoe executable is located.
+Just edit where the files are located and where they should be stored. I usually move them to where the ./tippecanoe executable is located.
 
 Then, just run ./convert.sh.
 
@@ -41,6 +42,8 @@ To see what the id is, run "sqlite3 name_of_tile.mbtiles". Then type "select * f
 Change the values .tiger2015 and .osm with the id values of your tiles.
 
 Run the road-diff program like, node index.js country.mbtiles gpx.mbtiles.
+
+Then use "tippecanoe -o hdif.mbtiles hdif.ldjson" or whatever you named your output, to convert it to mbtiles.
 
 Now you can upload the tilesets to mapbox studio and create a style. Add both of the mbtiles as layers on the map. Then publish it.
 
