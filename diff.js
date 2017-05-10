@@ -3,12 +3,12 @@ var lineclip = require('lineclip');
 
 module.exports = function(data, tile, writeData, done) {
 
-  // filter and normalize input geometry
+  // filter the geometry
   var tiger = toLines(data.tiger.gpx);
   var streets = toLines(data.osm.hawaii);
 
-  // find tiger parts that are not covered by streets within 10 pixels;
-  // filter out chunks that are too short
+  // compares the lines within 10 pixels
+  // gets rid of small line differences
   var diff = linematch(tiger, streets, 5).filter(filterShort);
 
   if (diff.length) {
