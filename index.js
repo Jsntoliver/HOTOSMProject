@@ -1,10 +1,10 @@
 var tileReduce = require('tile-reduce');
 var path = require('path');
 var fs = require('fs');
-
+//the arguments
 var osm = process.argv[2];
 var tiger = process.argv[3];
-
+//error checking
 if (!osm || !tiger) return console.log('must specify osm and tiger tilesets:', process.argv[0], process.argv[1], '<osm.mbtiles>', '<tiger.mbtiles>');
 
 tileReduce({
